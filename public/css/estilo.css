@@ -1,0 +1,22 @@
+
+.componentes-menu{
+   margin-top: 0.7em;
+   display:flex;
+   flex: 1;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap
+}
+
+.logo {
+    width: 60%;
+
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
