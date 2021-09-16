@@ -26,10 +26,20 @@ Route::group(['prefix'=>'contatos', 'as'=>'contatos.'], function(){
     Route::post('editar/{id}', 'ContatoController@update')->name('atualizar');
 
 
+
 });
 
+Route::get('editar-user', 'UserController@edit')->name('user.editar');
+Route::post('editar-user', 'UserController@update')->name('user.atualizar');
+Route::delete('remover-user', 'UserController@destroy')->name('user.delete');
 
 
 
 
 
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('logout', 'Auth\LoginController@logout');

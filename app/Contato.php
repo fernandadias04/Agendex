@@ -9,7 +9,10 @@ class Contato extends Model
 {
 
     protected $fillable = [
-        'nome', 'telefone', 'foto'
+        'nome',
+        'telefone',
+        'foto',
+        'user_id',
     ];
 
 }

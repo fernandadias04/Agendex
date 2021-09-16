@@ -19,6 +19,8 @@ class CriarTabelaContatos extends Migration
             $table->string('nome');
             $table->string('foto')->nullable();
             $table->string('telefone');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign(['user_id'])->on('users')->references('id')->onDelete('cascade');
         });
     }
 
