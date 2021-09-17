@@ -53,6 +53,12 @@
             <button class="btn btn-warning">Editar</button>
         </form>
         </th>
+        <th>
+        <form method="get" action="{{ route('contatos.notas.notas', ['id'=> $contato->id]) }}">
+            @csrf
+            <button class="btn btn-success"> Notas</button>
+        </form>
+        </th>
     </tr>
 
   </tbody>

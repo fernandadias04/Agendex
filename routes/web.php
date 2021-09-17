@@ -25,6 +25,17 @@ Route::group(['prefix'=>'contatos', 'as'=>'contatos.'], function(){
     Route::get('editar/{id}', 'ContatoController@edit')->name('editar');
     Route::post('editar/{id}', 'ContatoController@update')->name('atualizar');
 
+    Route::group(['prefix'=>'{contatoId}/notas', 'as'=>'notas.'], function(){
+
+        Route::get('notas', 'NotaController@index')->name('notas');
+        Route::get('criar', 'NotaController@cadastro')->name('criar');
+        Route::post('criar', 'NotaController@store')->name('salvar');
+        Route::get('editar/{id}', 'NotaController@edit')->name('editar');
+        Route::post('editar/{id}', 'NotaController@update')->name('atualizar');
+        Route::delete('remover/{id}', 'NotaController@destroy')->name('excluir');
+
+    });
+
 
 
 });

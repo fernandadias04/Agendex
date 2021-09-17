@@ -15,4 +15,10 @@ class Contato extends Model
         'user_id',
     ];
 
+     public function notas()
+    {
+       return $this->hasMany(\App\Nota::class, 'contato_id');
+    }
+
 }
+
